@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="content-type">
+<title>Live Resultate</title>
+<meta name="description" content="Live Resultate auf deinem Smartphone von Orientierunngsläufen in der ganzen Schweiz">
+
+<link rel="shortcut icon" type="image/x-icon" href="lomFavicon.png">
+
+<script type="text/javascript" src="jquery1.6.4.js"></script>
+<script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
+<style type="text/css" media="screen">@import "jqtouch/jqtouch.css";</style>
+<style type="text/css" media="screen">@import "themes/apple/theme.css";</style>
+
+<script type="text/javascript">
+$.jQTouch({{
+    icon: 'jqtouch.png',
+    statusBar: 'default',
+    cacheGetRequests: false,
+    fullScreen: true,
+    icon: 'lomIcon.png',
+    preloadImages: [
+        'themes/apple/img/backButton.png',
+        'themes/apple/img/activeButton.png',
+        'themes/apple/img/loading.png'
+        ],
+    useFastTouch: true
+}});</script>
+<style type="text/css">
+@import "themes/apple/tablecells.css";
+</style>
+</head>
+<body>
+<div id="jqt">
+	<div id="home" class="current">
+		<div class="toolbar">
+			<h1>{title}</h1>
+		</div>
+		<div class="info">
+			<p>{description}</p>
+		</div>
+		
+		<!--<ul class="rounded">
+        <li style="text-align: left; vertical-align: middle;">
+        <img src="lomIcon.png" title="LOM 2011" alt="LOM 2011" style="float: left; margin-right: 10px;"/>
+        Realisiert für die LOM 2011 in Zusammenarbeit mit picoSOFT<br />
+        http://resultate.lom2011.ch
+        </li>
+        </ul>-->
+	
+		<ul class="rounded">
+			{datablock}
+		</ul>
+		
+		<div style="margin: 10px;">
+		<a href="{otherlink[url]}" target="_blank" class="whiteButton">{otherlink[caption]}</a>
+		</div>
+        
+        <p class="info">&copy; by dola 2011</p>
+	</div>
+</div>
+</body>
+</html>
